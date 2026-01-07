@@ -30,10 +30,10 @@ const weekday = new Date(props.current?.time).toLocaleDateString("en-US", {
   return (
     <div className=' w-full lg:w-2/3 mt-3'>
         <div className="
-            bg-[url('./images/bg-today-small.svg')] 
+            bg-[url('/images/bg-today-small.svg')] 
             bg-cover bg-no-repeat bg-center w-full h-64 rounded-xl p-6 text-white
             flex flex-col justify-between items-center lg:flex-row
-            lg:bg-[url('./images/bg-today-large.svg')] lg:h-96" 
+            lg:bg-[url('/images/bg-today-large.svg')] lg:h-96" 
         >
             <div className='text-center lg:text-left'>
                 <h2 className='font-bold text-3xl'>{props.location}</h2>

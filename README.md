@@ -1,3 +1,6 @@
+# WeatherPage
+A responsive weather app with search functionality, unit conversion, and detailed forecasts using the Open-Meteo API.
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
