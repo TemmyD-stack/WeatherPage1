@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { IoSettingsOutline } from "react-icons/io5";
+
 import logo from '../assets/images/logo.svg'
 const styles = {
   backgroundColor: 'hsl(243, 96%, 9%)',
@@ -22,6 +24,7 @@ const Header = () => {
         onChange={(e) => setUnits(e.target.value)}
         value={units}
         >
+          <IoSettingsOutline />
           <option value="units">Units</option>
           {options.map((option) => (
             <option key={option.value} value={option.value}>
