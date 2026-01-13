@@ -40,7 +40,7 @@ const Hourly = (props) => {
       return null;
     })
     .filter(Boolean)
-    .slice(0, 8); 
+     
 };
 
 
@@ -64,23 +64,25 @@ const Hourly = (props) => {
           </select>
         </div>
 
-        {getHourlyForDay(props.hourly, selectedDay).map((hour, i) => (
-          <div
-            key={i}
-            className="flex justify-between bg-gray-800 border border-gray-100 text-white rounded-lg p-3 py-4 gap-2 mt-3 text-center"
-          >
-            <div className='flex gap-4'>
-              <span className='text-3xl'>{getTempIcon(hour.temp)}</span>
-              <p className="text-xl ">
-                {new Date(hour.time).toLocaleTimeString("en-US", {
-                  hour: "numeric",
-                  hour12: true,
-                })}
-              </p>
+        <div className='max-h-162.5 overflow-y-auto mt-3 pr-2'>
+          {getHourlyForDay(props.hourly, selectedDay).map((hour, i) => (
+            <div
+              key={i}
+              className="flex justify-between bg-gray-800 border border-gray-100 text-white rounded-lg gap-2 p-3 mt-4 mb-3 py-4 text-center"
+            >
+              <div className='flex gap-4'>
+                <span className='text-3xl'>{getTempIcon(hour.temp)}</span>
+                <p className="text-xl ">
+                  {new Date(hour.time).toLocaleTimeString("en-US", {
+                    hour: "numeric",
+                    hour12: true,
+                  })}
+                </p>
+              </div>
+              <p className="text-lg">{Math.floor(hour.temp)}°</p>
             </div>
-            <p className="text-lg">{Math.floor(hour.temp)}°</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
 
