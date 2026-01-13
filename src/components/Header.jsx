@@ -24,7 +24,7 @@ const Header = () => {
         onChange={(e) => setUnits(e.target.value)}
         value={units}
         >
-          <IoSettingsOutline />
+          {/* <IoSettingsOutline /> */}
           <option value="units">Units</option>
           {options.map((option) => (
             <option key={option.value} value={option.value}>

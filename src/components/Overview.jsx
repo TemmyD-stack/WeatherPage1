@@ -1,4 +1,5 @@
 import React from 'react'
+
 const getDailyFromHourly = (hourly) => {
   if (!hourly?.time || !hourly?.temperature_2m) return [];
 
@@ -35,6 +36,7 @@ const Overview = (props) => {
 const weekday = new Date(props.current?.time).toLocaleDateString("en-US", {
     weekday: "short",
   });
+
   const getTempIcon = (temp) => {
   if (temp <= 0) return "❄️";       
   if (temp <= 10) return "🥶";       
@@ -91,10 +93,10 @@ const weekday = new Date(props.current?.time).toLocaleDateString("en-US", {
           <h2 className='font-semibold text-xl pb-3'>Daily Forecast</h2>
 
           <div className='w-full grid grid-cols-3 lg:grid-cols-7 gap-4'>
-          {dailyForecast.map((day) => {
-  const weekday = new Date(day.date).toLocaleDateString("en-US", {
-    weekday: "short",
-  });
+              {dailyForecast.map((day) => {
+                const weekday = new Date(day.date).toLocaleDateString("en-US", {
+                  weekday: "short",
+          });
 
   return (
     <div

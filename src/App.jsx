@@ -15,7 +15,7 @@ const styles = {
 function App() {
   
   const [location, setLocation] = useState({
-    name: "Berlin",
+    name: "Berlin, Germany",
     lat: 52.52,
     lon: 13.41,
   });
